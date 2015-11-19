@@ -11,6 +11,7 @@ namespace ConsoleApplication2
         static void Main(string[] args)
         {
             Console.WriteLine("Road to Dreams Never End");
+            Console.ReadKey();
         }
     }
 }
