@@ -239,6 +239,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.RosyBrown;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -247,9 +248,10 @@
             this.Column6,
             this.Column7,
             this.Column12});
-            this.dataGridView2.Location = new System.Drawing.Point(545, 75);
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView2.Location = new System.Drawing.Point(564, 73);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(643, 511);
+            this.dataGridView2.Size = new System.Drawing.Size(644, 560);
             this.dataGridView2.TabIndex = 16;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -510,6 +512,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.RosyBrown;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -518,9 +521,9 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dataGridView1.Location = new System.Drawing.Point(558, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(562, 70);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(644, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(646, 564);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 

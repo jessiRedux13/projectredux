@@ -30,73 +30,64 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.dgvCategory = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCatID = new System.Windows.Forms.TextBox();
+            this.btnLoadCat = new System.Windows.Forms.Button();
+            this.cboCattype = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancelCategory = new System.Windows.Forms.Button();
+            this.txtCatname = new System.Windows.Forms.TextBox();
+            this.btnSaveCategory = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCatDesc = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnclearP_info = new System.Windows.Forms.Button();
-            this.btnsaveP_info = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtpid = new System.Windows.Forms.TextBox();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnUp = new System.Windows.Forms.Button();
+            this.btnload = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbocategory = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnclear = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.txtReorderlevel = new System.Windows.Forms.TextBox();
+            this.txtp_description = new System.Windows.Forms.TextBox();
+            this.txtp_name = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.panel1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(3, 2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1215, 689);
@@ -106,10 +97,8 @@
             // 
             this.tabPage1.BackgroundImage = global::WindowsFormsApplication3.Properties.Resources.red_console;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.dgvCategory);
             this.tabPage1.Controls.Add(this.button7);
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -117,240 +106,42 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1207, 660);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "ADD";
+            this.tabPage1.Text = "Category";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // tabPage2
+            // dgvCategory
             // 
-            this.tabPage2.BackgroundImage = global::WindowsFormsApplication3.Properties.Resources.red_console;
-            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage2.Controls.Add(this.panel4);
-            this.tabPage2.Controls.Add(this.panel3);
-            this.tabPage2.Controls.Add(this.button9);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1207, 660);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "UPDATE";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            this.dgvCategory.Location = new System.Drawing.Point(455, 77);
+            this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.Size = new System.Drawing.Size(412, 476);
+            this.dgvCategory.TabIndex = 14;
+            this.dgvCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellDoubleClick);
             // 
-            // tabPage3
+            // Column1
             // 
-            this.tabPage3.BackgroundImage = global::WindowsFormsApplication3.Properties.Resources.red_console;
-            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1207, 660);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "DELETE";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Column1.HeaderText = "Cat_ID";
+            this.Column1.Name = "Column1";
             // 
-            // textBox1
+            // Column2
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
             // 
-            // textBox2
+            // Column3
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 1;
+            this.Column3.HeaderText = "Description";
+            this.Column3.Name = "Column3";
             // 
-            // textBox3
+            // Column4
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 117);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Cat_Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Cat_type";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 123);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Cat_description";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(83, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(179, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(60, 144);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 234);
-            this.panel1.TabIndex = 8;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(105, 82);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Category";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(254, 82);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Product_info";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Location = new System.Drawing.Point(407, 144);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 234);
-            this.panel2.TabIndex = 11;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(139, 28);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 0;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(139, 56);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 1;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(139, 84);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 2;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(139, 117);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 3;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(69, 171);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(174, 171);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Clear";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(4, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "P_Name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(4, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 16);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "P_description";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 88);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Quantity_pr_Unit";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 16);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Expiration_Date";
+            this.Column4.HeaderText = "type";
+            this.Column4.Name = "Column4";
             // 
             // button7
             // 
@@ -362,252 +153,366 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // panel1
             // 
-            this.button8.Location = new System.Drawing.Point(135, 78);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Category";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.txtCatID);
+            this.panel1.Controls.Add(this.btnLoadCat);
+            this.panel1.Controls.Add(this.cboCattype);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btnCancelCategory);
+            this.panel1.Controls.Add(this.txtCatname);
+            this.panel1.Controls.Add(this.btnSaveCategory);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtCatDesc);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(25, 91);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(364, 240);
+            this.panel1.TabIndex = 8;
             // 
-            // button9
+            // btnDelete
             // 
-            this.button9.Location = new System.Drawing.Point(270, 78);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(103, 23);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Product_info";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnDelete.Location = new System.Drawing.Point(145, 214);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // panel3
+            // btnUpdate
             // 
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.textBox15);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.button10);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.button11);
-            this.panel3.Controls.Add(this.textBox9);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox10);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(89, 153);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(274, 234);
-            this.panel3.TabIndex = 12;
+            this.btnUpdate.Location = new System.Drawing.Point(34, 214);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 17;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(29, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(23, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "ID";
+            // 
+            // txtCatID
+            // 
+            this.txtCatID.Location = new System.Drawing.Point(154, 14);
+            this.txtCatID.Name = "txtCatID";
+            this.txtCatID.ReadOnly = true;
+            this.txtCatID.Size = new System.Drawing.Size(170, 22);
+            this.txtCatID.TabIndex = 15;
+            // 
+            // btnLoadCat
+            // 
+            this.btnLoadCat.Location = new System.Drawing.Point(249, 186);
+            this.btnLoadCat.Name = "btnLoadCat";
+            this.btnLoadCat.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadCat.TabIndex = 14;
+            this.btnLoadCat.Text = "Load";
+            this.btnLoadCat.UseVisualStyleBackColor = true;
+            // 
+            // cboCattype
+            // 
+            this.cboCattype.FormattingEnabled = true;
+            this.cboCattype.Items.AddRange(new object[] {
+            "Food",
+            "Beverage",
+            "Medicine",
+            "Other"});
+            this.cboCattype.Location = new System.Drawing.Point(154, 77);
+            this.cboCattype.Name = "cboCattype";
+            this.cboCattype.Size = new System.Drawing.Size(170, 24);
+            this.cboCattype.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Cat_Name";
+            // 
+            // btnCancelCategory
+            // 
+            this.btnCancelCategory.Location = new System.Drawing.Point(145, 186);
+            this.btnCancelCategory.Name = "btnCancelCategory";
+            this.btnCancelCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelCategory.TabIndex = 7;
+            this.btnCancelCategory.Text = "Clear";
+            this.btnCancelCategory.UseVisualStyleBackColor = true;
+            this.btnCancelCategory.Click += new System.EventHandler(this.btnCancelCategory_Click);
+            // 
+            // txtCatname
+            // 
+            this.txtCatname.Location = new System.Drawing.Point(154, 42);
+            this.txtCatname.Name = "txtCatname";
+            this.txtCatname.Size = new System.Drawing.Size(170, 22);
+            this.txtCatname.TabIndex = 0;
+            // 
+            // btnSaveCategory
+            // 
+            this.btnSaveCategory.Location = new System.Drawing.Point(32, 186);
+            this.btnSaveCategory.Name = "btnSaveCategory";
+            this.btnSaveCategory.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveCategory.TabIndex = 6;
+            this.btnSaveCategory.Text = "Save";
+            this.btnSaveCategory.UseVisualStyleBackColor = true;
+            this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 123);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 16);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Cat_description";
+            // 
+            // txtCatDesc
+            // 
+            this.txtCatDesc.Location = new System.Drawing.Point(154, 117);
+            this.txtCatDesc.Name = "txtCatDesc";
+            this.txtCatDesc.Size = new System.Drawing.Size(170, 22);
+            this.txtCatDesc.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Cat_type";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackgroundImage = global::WindowsFormsApplication3.Properties.Resources.red_console;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.button1);
+            this.tabPage2.Controls.Add(this.dgvProduct);
+            this.tabPage2.Controls.Add(this.panel2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1207, 660);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Product Info";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1120, 17);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 26);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "E&xit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgvProduct.Location = new System.Drawing.Point(468, 78);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.Size = new System.Drawing.Size(447, 476);
+            this.dgvProduct.TabIndex = 13;
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
+            this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "P_id";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "P_name";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "P_description";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Reorder_level";
+            this.Column8.Name = "Column8";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.txtpid);
+            this.panel2.Controls.Add(this.btnDel);
+            this.panel2.Controls.Add(this.btnUp);
+            this.panel2.Controls.Add(this.btnload);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.cbocategory);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.btnclear);
+            this.panel2.Controls.Add(this.btnsave);
+            this.panel2.Controls.Add(this.txtReorderlevel);
+            this.panel2.Controls.Add(this.txtp_description);
+            this.panel2.Controls.Add(this.txtp_name);
+            this.panel2.Location = new System.Drawing.Point(47, 128);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(374, 241);
+            this.panel2.TabIndex = 12;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 48);
+            this.label8.Location = new System.Drawing.Point(3, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 16);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Cat_Name";
+            this.label8.Size = new System.Drawing.Size(39, 16);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "P_Id";
             // 
-            // button10
+            // txtpid
             // 
-            this.button10.Location = new System.Drawing.Point(179, 171);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Clear";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.txtpid.Location = new System.Drawing.Point(139, 4);
+            this.txtpid.Name = "txtpid";
+            this.txtpid.ReadOnly = true;
+            this.txtpid.Size = new System.Drawing.Size(200, 22);
+            this.txtpid.TabIndex = 15;
             // 
-            // textBox8
+            // btnDel
             // 
-            this.textBox8.Location = new System.Drawing.Point(154, 42);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 0;
+            this.btnDel.Location = new System.Drawing.Point(193, 210);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 23);
+            this.btnDel.TabIndex = 14;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // button11
+            // btnUp
             // 
-            this.button11.Location = new System.Drawing.Point(83, 171);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "Save";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnUp.Location = new System.Drawing.Point(97, 210);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(75, 23);
+            this.btnUp.TabIndex = 13;
+            this.btnUp.Text = "Update";
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
             // 
-            // textBox9
+            // btnload
             // 
-            this.textBox9.Location = new System.Drawing.Point(154, 79);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 1;
+            this.btnload.Location = new System.Drawing.Point(236, 181);
+            this.btnload.Name = "btnload";
+            this.btnload.Size = new System.Drawing.Size(75, 23);
+            this.btnload.TabIndex = 12;
+            this.btnload.Text = "Load";
+            this.btnload.UseVisualStyleBackColor = true;
+            this.btnload.Click += new System.EventHandler(this.btnload_Click);
             // 
-            // label9
+            // label19
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(29, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 16);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Cat_description";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 124);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 16);
+            this.label19.TabIndex = 11;
+            this.label19.Text = "Category";
             // 
-            // textBox10
+            // cbocategory
             // 
-            this.textBox10.Location = new System.Drawing.Point(154, 117);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(100, 22);
-            this.textBox10.TabIndex = 2;
+            this.cbocategory.FormattingEnabled = true;
+            this.cbocategory.Location = new System.Drawing.Point(139, 116);
+            this.cbocategory.Name = "cbocategory";
+            this.cbocategory.Size = new System.Drawing.Size(200, 24);
+            this.cbocategory.TabIndex = 10;
             // 
-            // label10
+            // label6
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(29, 85);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 16);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Cat_type";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 92);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(103, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Reorder level";
             // 
-            // panel4
+            // label5
             // 
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.textBox16);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Controls.Add(this.label13);
-            this.panel4.Controls.Add(this.label14);
-            this.panel4.Controls.Add(this.btnclearP_info);
-            this.panel4.Controls.Add(this.btnsaveP_info);
-            this.panel4.Controls.Add(this.textBox11);
-            this.panel4.Controls.Add(this.textBox12);
-            this.panel4.Controls.Add(this.textBox13);
-            this.panel4.Controls.Add(this.textBox14);
-            this.panel4.Location = new System.Drawing.Point(460, 136);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(273, 251);
-            this.panel4.TabIndex = 13;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 66);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 16);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "P_description";
             // 
-            // label11
+            // label4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(4, 120);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(118, 16);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Expiration_Date";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "P_Name";
             // 
-            // label12
+            // btnclear
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 88);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 16);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Quantity_pr_Unit";
+            this.btnclear.Location = new System.Drawing.Point(155, 181);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(75, 23);
+            this.btnclear.TabIndex = 5;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
-            // label13
+            // btnsave
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(4, 62);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(103, 16);
-            this.label13.TabIndex = 7;
-            this.label13.Text = "P_description";
+            this.btnsave.Location = new System.Drawing.Point(58, 181);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(75, 23);
+            this.btnsave.TabIndex = 4;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
             // 
-            // label14
+            // txtReorderlevel
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 16);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "P_Name";
+            this.txtReorderlevel.Location = new System.Drawing.Point(139, 88);
+            this.txtReorderlevel.Name = "txtReorderlevel";
+            this.txtReorderlevel.Size = new System.Drawing.Size(200, 22);
+            this.txtReorderlevel.TabIndex = 2;
             // 
-            // btnclearP_info
+            // txtp_description
             // 
-            this.btnclearP_info.Location = new System.Drawing.Point(174, 171);
-            this.btnclearP_info.Name = "btnclearP_info";
-            this.btnclearP_info.Size = new System.Drawing.Size(75, 23);
-            this.btnclearP_info.TabIndex = 5;
-            this.btnclearP_info.Text = "Clear";
-            this.btnclearP_info.UseVisualStyleBackColor = true;
-            this.btnclearP_info.Click += new System.EventHandler(this.btnclearP_info_Click);
+            this.txtp_description.Location = new System.Drawing.Point(139, 60);
+            this.txtp_description.Name = "txtp_description";
+            this.txtp_description.Size = new System.Drawing.Size(200, 22);
+            this.txtp_description.TabIndex = 1;
             // 
-            // btnsaveP_info
+            // txtp_name
             // 
-            this.btnsaveP_info.Location = new System.Drawing.Point(69, 171);
-            this.btnsaveP_info.Name = "btnsaveP_info";
-            this.btnsaveP_info.Size = new System.Drawing.Size(75, 23);
-            this.btnsaveP_info.TabIndex = 4;
-            this.btnsaveP_info.Text = "Save";
-            this.btnsaveP_info.UseVisualStyleBackColor = true;
-            this.btnsaveP_info.Click += new System.EventHandler(this.btnsaveP_info_Click);
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(139, 117);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 22);
-            this.textBox11.TabIndex = 3;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(139, 84);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
-            this.textBox12.TabIndex = 2;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(139, 56);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(100, 22);
-            this.textBox13.TabIndex = 1;
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(139, 28);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(100, 22);
-            this.textBox14.TabIndex = 0;
-            // 
-            // textBox15
-            // 
-            this.textBox15.Location = new System.Drawing.Point(154, 3);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 22);
-            this.textBox15.TabIndex = 8;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(52, 16);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Cat_Id";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 16);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Cat_Id";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(139, 3);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(100, 22);
-            this.textBox16.TabIndex = 10;
+            this.txtp_name.Location = new System.Drawing.Point(139, 32);
+            this.txtp_name.Name = "txtp_name";
+            this.txtp_name.Size = new System.Drawing.Size(200, 22);
+            this.txtp_name.TabIndex = 0;
             // 
             // Medicine_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1226, 702);
+            this.ClientSize = new System.Drawing.Size(1247, 790);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
             this.Name = "Medicine_Up";
@@ -615,15 +520,13 @@
             this.Load += new System.EventHandler(this.Medicine_Up_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -633,55 +536,47 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCancelCategory;
+        private System.Windows.Forms.TextBox txtCatname;
+        private System.Windows.Forms.Button btnSaveCategory;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCatDesc;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.ComboBox cboCattype;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cbocategory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnclearP_info;
-        private System.Windows.Forms.Button btnsaveP_info;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.Button btnsave;
+        private System.Windows.Forms.TextBox txtReorderlevel;
+        private System.Windows.Forms.TextBox txtp_description;
+        private System.Windows.Forms.TextBox txtp_name;
+        private System.Windows.Forms.DataGridView dgvCategory;
+        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.Button btnLoadCat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCatID;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnUp;
+        private System.Windows.Forms.Button btnload;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox txtpid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Button button1;
     }
 }

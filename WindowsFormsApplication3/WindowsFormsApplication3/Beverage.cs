@@ -17,7 +17,35 @@ namespace WindowsFormsApplication3
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btncoffee_Click(object sender, EventArgs e)
+        {
+            products cat = new products();
+            cat.categorymodule = "Coffee";
+            cat.Show();
+        }
+
+        private void btnjuice_Click(object sender, EventArgs e)
+        {
+            products cat = new products();
+            cat.categorymodule = "Juice";
+            cat.Show();
+        }
+
+        private void btnmilk_Click(object sender, EventArgs e)
+        {
+            products cat = new products();
+            cat.categorymodule = "MilkChoco";
+            cat.Show();
+        }
+
+        private void btntea_Click(object sender, EventArgs e)
+        {
+            products cat = new products();
+            cat.categorymodule = "Tea";
+            cat.Show();
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
         {
             this.Close();
             Form2 main = new Form2();

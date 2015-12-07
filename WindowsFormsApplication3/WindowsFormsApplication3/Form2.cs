@@ -12,6 +12,7 @@ namespace WindowsFormsApplication3
 {
     public partial class Form2 : Form
     {
+        public char keyChar;
         public Form2()
         {
             InitializeComponent();
@@ -59,7 +60,6 @@ namespace WindowsFormsApplication3
             this.Hide();
             Beverage bev = new Beverage();
             bev.Show();
-
         }
 
         private void button7_Click_1(object sender, EventArgs e)
@@ -68,5 +68,16 @@ namespace WindowsFormsApplication3
             Medicine_Up mu = new Medicine_Up();
             mu.Show();
         }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Manage_inventory manage = new Manage_inventory();
+            manage.Show();
+        }
+
+       
+       
+
     }
 }

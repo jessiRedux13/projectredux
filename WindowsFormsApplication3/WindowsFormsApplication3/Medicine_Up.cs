@@ -15,182 +15,371 @@ namespace WindowsFormsApplication3
     {
         private MySqlConnection connection;
         String ConnectionString = "Server=192.168.0.24;Database=inventory_food_meds;Uid=jes;Pwd=!ojt2015";
+
+
         public Medicine_Up()
         {
             InitializeComponent();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Delete()
         {
-            this.Close();
-            Form2 F = new Form2();
-            F.Show();
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
 
+                connection.Open();
+
+
+                MySqlCommand cmd = new MySqlCommand("delete from category where cid = '" + txtCatID.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully deleted");
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void UpdateCategory()
         {
-            
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand("update category set cat_name = '" + txtCatname.Text + "',ctype = '" + cboCattype.Text + "',cat_description = '" + txtCatDesc.Text + "' where  cid= '" + txtCatID.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully updated");
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+
+
+        private void InsertCategory()
         {
-            panel1.Visible = true;
-            panel2.Visible = false;
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+
+                MySqlCommand cmd = new MySqlCommand("insert into category(cat_name,ctype,cat_description) value( '" + txtCatname.Text + "','" + cboCattype.Text + "','" + txtCatDesc.Text + "')", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully saved");
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void button4_Click(object sender, EventArgs e)
+
+        private void LoadAllcategory()
         {
-            panel1.Visible = false;
-            panel2.Visible = true;
+            connection = new MySqlConnection(ConnectionString);
+            dgvCategory.Rows.Clear();
+            try
+            {
+                //open connection
+                connection.Open();
+
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand("select * from category", connection);
+
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    dgvCategory.Rows.Add(dataReader["cid"] + "", dataReader["cat_name"] + "", dataReader["cat_description"] + "", dataReader["ctype"] + "");                    
+                }
+                //close connection
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnSaveCategory_Click(object sender, EventArgs e)
+        {
+            InsertCategory();
+            LoadAllcategory();
+        }
+
+        private void btnCancelCategory_Click(object sender, EventArgs e)
+        {
+            txtCatID.Text = "";
+            txtCatname.Text = "";
+            cboCattype.Text = "";
+            txtCatDesc.Text = "";
+        }
+
+        private void btnLoadCat_Click(object sender, EventArgs e)
+        {
+            LoadAllcategory();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateCategory();
+            LoadAllcategory();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete();
+            LoadAllcategory();
+        }
+
+        private void dgvCategory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCatID.Text = dgvCategory.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtCatname.Text = dgvCategory.Rows[e.RowIndex].Cells[1].Value.ToString();
+            cboCattype.Text = dgvCategory.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtCatDesc.Text = dgvCategory.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
+
+       
+
+        private void btnsave_Click(object sender, EventArgs e)
+        {
+            InsertProduct();
+            LoadAllproduct();
+        }
+        private void InsertProduct()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+                string[] cat_id = cbocategory.Text.Split(new char[] { '|' });
+
+                MySqlCommand cmd = new MySqlCommand("insert into product_info(p_name,p_description,Reorder_level,cat_fk) value( '" + txtp_name.Text + "','" + txtp_description.Text + "','" + txtReorderlevel.Text + "','" + cat_id[0] + "')", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully saved");
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void UpdateProduct()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+                string[] cat_id = cbocategory.Text.Split(new char[] { '|' });
+                MySqlCommand cmd = new MySqlCommand("update product_info set p_name = '" + txtp_name.Text + "',p_description = '" + txtp_description.Text + "',Reorder_level = '" + txtReorderlevel.Text + "',cat_FK='" + cat_id[0] + "' where  pid= '" + txtpid.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully updated");
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void DeleteProduct()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+
+
+                MySqlCommand cmd = new MySqlCommand("delete from product_info where pid = '" + txtpid.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully deleted");
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            txtpid.Text = "";
+            txtp_name.Text = "";
+            txtp_description.Text = "";
+            txtReorderlevel.Text = "";
+            cbocategory.Text = "";
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            UpdateProduct();
+            LoadAllproduct();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            Delprod();
+            LoadAllproduct();
+        }
+        private void LoadAllproduct()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            dgvProduct.Rows.Clear();
+            try
+            {
+                //open connection
+                connection.Open();
+
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand("select * from product_info ", connection);
+
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    dgvProduct.Rows.Add(dataReader["pid"] + "", dataReader["p_name"] + "", dataReader["p_description"] + "", dataReader["Reorder_level"] + "");
+                }
+                //close connection
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        
+
+        private void btnload_Click(object sender, EventArgs e)
+        {
+            LoadAllproduct();
+        }
+
+        private void dgvProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtpid.Text = dgvProduct.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtp_name.Text = dgvProduct.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtp_description.Text = dgvProduct.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtReorderlevel.Text = dgvProduct.Rows[e.RowIndex].Cells[3].Value.ToString();
+          
+        }
+        private void Category()
+        {
+            connection = new MySqlConnection(ConnectionString);
+
+            try
+            {
+                //open connection
+                connection.Open();
+
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand("select * from category", connection);
+
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    cbocategory.Items.Add(dataReader["cid"] + "|" + dataReader["cat_name"]);
+
+                }
+                //close connection
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show(ex.Message);
+            }
         }
 
         private void Medicine_Up_Load(object sender, EventArgs e)
         {
-            panel1.Visible = false;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
+            LoadAllcategory();
+            LoadAllproduct();
+            Category();
+        }
+        private void Delprod()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
 
+                connection.Open();
+
+
+                MySqlCommand cmd = new MySqlCommand("delete from product_info where pid = '" + txtpid.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully deleted");
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 main = new Form2();
+            main.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            connection = new MySqlConnection(ConnectionString);
-            try
-            {
-
-                connection.Open();
-
-                MySqlCommand cmd = new MySqlCommand("insert into category(cat_name,ctype,cat_description) value( '" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "')", connection);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Successfully saved");
-                //LoadAllEmployee();
-                connection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            this.Close();
+            Form2 main = new Form2();
+            main.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            textBox1.Clear();
-            textBox2.Clear();
-            textBox3.Clear();
-        }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-            connection = new MySqlConnection(ConnectionString);
-            try
-            {
-
-                connection.Open();
-
-                MySqlCommand cmd = new MySqlCommand("insert into product_info(p_name,p_description,quantity_per_unit,expiration_date) value( '" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')", connection);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Successfully saved");
-                //LoadAllEmployee();
-                connection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            textBox4.Clear();
-            textBox5.Clear();
-            textBox6.Clear();
-            textBox7.Clear();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            panel3.Visible = true;
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            panel4.Visible = true;
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            connection = new MySqlConnection(ConnectionString);
-            try
-            {
-
-                connection.Open();
-
-                MySqlCommand cmd = new MySqlCommand("update category set cat_name = '" + textBox8.Text + "',ctype = '" + textBox9.Text + "',cat_description = '" + textBox10.Text+"' where  cid= '" + textBox15.Text + "'", connection);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Successfully updated");
-               // LoadAllUpdates();
-
-                connection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            textBox8.Clear();
-            textBox9.Clear();
-            textBox10.Clear();
-            textBox15.Clear();
-        }
-
-        private void btnsaveP_info_Click(object sender, EventArgs e)
-        {
-            connection = new MySqlConnection(ConnectionString);
-            try
-            {
-
-                connection.Open();
-
-                MySqlCommand cmd = new MySqlCommand("update product_info set p_name = '" + textBox14.Text + "',p_description = '" + textBox13.Text + "',quantity_per_unit = '" + textBox12.Text + "',expiration_date = '" + textBox11.Text + "' where  pid= '" + textBox16.Text + "'", connection);
-
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Successfully updated");
-                // LoadAllUpdates();
-
-                connection.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btnclearP_info_Click(object sender, EventArgs e)
-        {
-            textBox11.Clear();
-            textBox12.Clear();
-            textBox13.Clear();
-            textBox14.Clear();
-            textBox16.Clear();
-
-        }
     }
 }

@@ -28,15 +28,67 @@ namespace WindowsFormsApplication3
         private void button1_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Form2 main = new Form2();
-            main.Show();
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void badgeno(object sender, KeyEventArgs e)
+        {
+            connection = new MySqlConnection(ConnectionString); 
+             try
+            {
+                //open connection
+                connection.Open();
+
+                //create command and assign the query and connection from the constructor
+                MySqlCommand cmd = new MySqlCommand("select * from users where badge_no='"+textBox1.Text+"'", connection);
+
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                     if(e.KeyCode==Keys.Enter)
+                       {
+                         this.Hide();
+                         Form2 main = new Form2();
+                         main.Show();
+                       }
+                    
+                
+                }
+                //close connection
+                connection.Close();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Input!");
+            }
+
+        
+
+        }
     }
-}
+      
+    
+        
+         
+       
+   }
+

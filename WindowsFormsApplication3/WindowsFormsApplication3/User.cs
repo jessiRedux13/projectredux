@@ -72,21 +72,20 @@ namespace WindowsFormsApplication3
             dataGridView1.Rows.Clear();
             try
             {
-                //open connection
+                
                 connection.Open();
 
-                //create command and assign the query and connection from the constructor
+                
                 MySqlCommand cmd = new MySqlCommand("select * from users", connection);
 
-                //Create a data reader and Execute the command
+                
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
-                //Read the data and store them in the list
                 while (dataReader.Read())
                 {
                     dataGridView1.Rows.Add(dataReader["uid"] + "", dataReader["badge_no"] + "", dataReader["email"] + "", dataReader["fname"] + "", dataReader["lname"] + "", dataReader["acct_type"]);
                 }
-                //close connection
+                
                 connection.Close();
 
             }
@@ -181,6 +180,7 @@ namespace WindowsFormsApplication3
             textBox12.Clear();
             textBox13.Clear();
             textBox14.Clear();
+            
         }
 
         private void button8_Click(object sender, EventArgs e)

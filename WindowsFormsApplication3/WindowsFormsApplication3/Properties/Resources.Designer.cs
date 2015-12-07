@@ -83,6 +83,46 @@ namespace WindowsFormsApplication3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abstract_crimson_landscape_backgrounds_powerpoint {
+            get {
+                object obj = ResourceManager.GetObject("abstract-crimson-landscape-backgrounds-powerpoint", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_crimson_landscape_backgrounds_powerpoint1 {
+            get {
+                object obj = ResourceManager.GetObject("abstract-crimson-landscape-backgrounds-powerpoint1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abstract_crimson_landscape_backgrounds_powerpoint2 {
+            get {
+                object obj = ResourceManager.GetObject("abstract-crimson-landscape-backgrounds-powerpoint2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bev {
+            get {
+                object obj = ResourceManager.GetObject("bev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap beverages_Icon {
             get {
                 object obj = ResourceManager.GetObject("beverages Icon", resourceCulture);
@@ -96,6 +136,16 @@ namespace WindowsFormsApplication3.Properties {
         internal static System.Drawing.Bitmap Custom_Icon_Design_Pretty_Office_13_Users {
             get {
                 object obj = ResourceManager.GetObject("Custom-Icon-Design-Pretty-Office-13-Users", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dbdfea603c6ec8fc1fd0fec767a1cd20_Update10_1156_577_c {
+            get {
+                object obj = ResourceManager.GetObject("dbdfea603c6ec8fc1fd0fec767a1cd20_Update10-1156-577-c", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +196,16 @@ namespace WindowsFormsApplication3.Properties {
         internal static System.Drawing.Bitmap Food {
             get {
                 object obj = ResourceManager.GetObject("Food", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap food_and_beverages {
+            get {
+                object obj = ResourceManager.GetObject("food-and-beverages", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +326,16 @@ namespace WindowsFormsApplication3.Properties {
         internal static System.Drawing.Bitmap Misc_Misc_Stuff_icon {
             get {
                 object obj = ResourceManager.GetObject("Misc-Misc-Stuff-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap na {
+            get {
+                object obj = ResourceManager.GetObject("na", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

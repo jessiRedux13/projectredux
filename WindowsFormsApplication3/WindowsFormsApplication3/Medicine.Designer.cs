@@ -57,7 +57,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(256, 129);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 106);
+            this.button2.Size = new System.Drawing.Size(181, 118);
             this.button2.TabIndex = 1;
             this.button2.Text = "Colds";
             this.button2.UseVisualStyleBackColor = false;
@@ -69,10 +69,11 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(546, 129);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 106);
+            this.button3.Size = new System.Drawing.Size(175, 118);
             this.button3.TabIndex = 2;
             this.button3.Text = "Cough";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -80,10 +81,11 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(801, 129);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 106);
+            this.button4.Size = new System.Drawing.Size(175, 118);
             this.button4.TabIndex = 3;
             this.button4.Text = "Flu";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -91,10 +93,11 @@
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(256, 280);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 99);
+            this.button5.Size = new System.Drawing.Size(181, 111);
             this.button5.TabIndex = 4;
             this.button5.Text = "Anti_Diarrheal";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -102,10 +105,11 @@
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(546, 280);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(141, 99);
+            this.button6.Size = new System.Drawing.Size(175, 111);
             this.button6.TabIndex = 5;
             this.button6.Text = "Anti_Histamine";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -113,10 +117,11 @@
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.Location = new System.Drawing.Point(801, 280);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(141, 99);
+            this.button7.Size = new System.Drawing.Size(175, 111);
             this.button7.TabIndex = 6;
             this.button7.Text = "Anti_Pasmodic";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -124,10 +129,11 @@
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(256, 441);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(147, 102);
+            this.button8.Size = new System.Drawing.Size(181, 114);
             this.button8.TabIndex = 7;
             this.button8.Text = "Pain_Reliever";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -135,10 +141,11 @@
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(546, 441);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(141, 102);
+            this.button9.Size = new System.Drawing.Size(175, 114);
             this.button9.TabIndex = 8;
             this.button9.Text = "Dysmenorrhea";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -146,9 +153,9 @@
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(801, 441);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(141, 102);
+            this.button10.Size = new System.Drawing.Size(175, 114);
             this.button10.TabIndex = 9;
-            this.button10.Text = "ForHighblood";
+            this.button10.Text = "Highbloodpressure";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -183,6 +190,7 @@
             this.DoubleBuffered = true;
             this.Name = "Medicine";
             this.Text = "Medicine";
+            this.Load += new System.EventHandler(this.Medicine_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
