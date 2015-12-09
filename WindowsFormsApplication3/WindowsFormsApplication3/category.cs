@@ -42,7 +42,7 @@ namespace WindowsFormsApplication3
                 connection.Open();
 
                 //create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand("SELECT product_info.p_name FROM category Inner Join product_info ON category.cid = product_info.cat_FK where category.cat_name = '" + categorymodule + "'", connection);
+                MySqlCommand cmd = new MySqlCommand("SELECT product_info.pid, product_info.p_name FROM category Inner Join product_info ON category.cid = product_info.cat_FK where category.cat_name = '" + categorymodule + "'", connection);
 
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
@@ -50,9 +50,9 @@ namespace WindowsFormsApplication3
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                   dataGridView1.Rows.Add(dataReader["p_name"]);
+                    dataGridView1.Rows.Add(dataReader["pid"], dataReader["p_name"]);
                 }
-                
+
                 connection.Close();
 
             }
@@ -60,33 +60,54 @@ namespace WindowsFormsApplication3
             {
                 MessageBox.Show(ex.Message);
             }
+        }   
+               
+        private void productOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Selected == true)
+                {
+                    string qtyout = Microsoft.VisualBasic.Interaction.InputBox("Input quantity", " ", "");
+                    dataGridView2.Rows.Add(row.Cells[0].Value.ToString(), row.Cells[1].Value.ToString(), qtyout);
+                }
+            }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            dataGridView1.Rows[e.RowIndex].Selected = true;
+        }
+
+        private void btncheckout_Click(object sender, EventArgs e)
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != string.Empty)
+                    {
+                        MySqlCommand cmd = new MySqlCommand("insert into Stock_status(pid,Unit_out_stock) value('" + row.Cells[0].Value.ToString() + "','" + row.Cells[2].Value.ToString() + "')", connection);
+
+                        cmd.ExecuteNonQuery();
+                    }                 
+                }
+
             
 
-          
-        }
+                MessageBox.Show("Successfully saved");
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
+                connection.Close();
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {          
-               MessageBox.Show("Your request has been recorded!");            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
       
      }

@@ -16,3 +16,4 @@ C:\Users\OJT\projectredux\WindowsFormsApplication3\WindowsFormsApplication3\obj\
 C:\Users\OJT\projectredux\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Report.resources
 C:\Users\OJT\projectredux\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Beverage.resources
 C:\Users\OJT\projectredux\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Manage_inventory.resources
+C:\Users\OJT\projectredux\WindowsFormsApplication3\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Gen_Report.resources

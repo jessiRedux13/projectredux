@@ -64,10 +64,9 @@ namespace WindowsFormsApplication3
             {
                 //open connection
                 connection.Open();
-               // string[] p_id = cbopid2.Text.Split(new char[] { '|' });
+              
                 //create command and assign the query and connection from the constructor
-                MySqlCommand cmd = new MySqlCommand("select * from Stock_status where date(Prod_Added_Date)='"+dateTimePicker2.Value.ToString("yyyy-MM-dd")+"' ", connection);
-
+                MySqlCommand cmd = new MySqlCommand("select * from Stock_status where date(Prod_Added_Date)>='" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "'and date(Prod_Added_Date)<='" + dateTimePicker3.Value.ToString("yyyy-MM-dd") + "' and Module_stock = 'IN' ", connection);
                 //Create a data reader and Execute the command
                 MySqlDataReader dataReader = cmd.ExecuteReader();
 
@@ -99,11 +98,12 @@ namespace WindowsFormsApplication3
 
                 connection.Open();
 
-                MySqlCommand cmd = new MySqlCommand("insert into Stock_status(pid,Unit_in_stock,Unit_out_stock,Purchase_Price,Expired_Date) value('"+cbopid_pname.Text+"','" + txtboxU_in.Text + "','" + txtboxU_out.Text + "','" + txtboxp_price.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "')", connection);
+                MySqlCommand cmd = new MySqlCommand("insert into Stock_status(pid,Unit_in_stock,Purchase_Price,Expired_Date,Module_stock) value('" + cbopid_pname.Text + "','" + txtboxU_in.Text + "','" + txtboxp_price.Text + "','" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "','" + cbomodule.Text + "')", connection);
 
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Successfully saved");
+
 
                 connection.Close();
 
@@ -114,10 +114,7 @@ namespace WindowsFormsApplication3
             }
         }
         
-        private void Subtract()
-        {
-            
-        }
+        
 
         private void btnsave_Click(object sender, EventArgs e)
         {
@@ -129,6 +126,90 @@ namespace WindowsFormsApplication3
             LoadAllproduct();
         }
 
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 main = new Form2();
+            main.Show();
+        }
+        private void loadupdate()
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+                string[] pid = cbopid_pname.Text.Split(new char[] { '|' });
+                MySqlCommand cmd = new MySqlCommand("update Stock_status set Unit_in_stock = '" + txtboxU_in.Text + "',Purchase_Price = '" + txtboxp_price.Text + "',Expired_Date = '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' where pid = '" + pid[0] + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully updated");
+                LoadAllproduct();
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            loadupdate();
+        }
+
+        private void dgvmanage_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cbopid_pname.Text = dgvmanage.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtboxU_in.Text = dgvmanage.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtboxp_price.Text = dgvmanage.Rows[e.RowIndex].Cells[3].Value.ToString();
+            
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            connection = new MySqlConnection(ConnectionString);
+            try
+            {
+
+                connection.Open();
+
+
+                MySqlCommand cmd = new MySqlCommand("delete from Stock_status where pid = '" + cbopid_pname.Text + "'", connection);
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Successfully deleted");
+                LoadAllproduct();
+
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cbopid_pname.Text = "";
+            txtboxU_in.Text = "";
+            txtboxp_price.Text = "";
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Gen_Report report = new Gen_Report();
+            report.Show();
+        }
+
+       
        
         
 

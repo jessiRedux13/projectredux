@@ -29,27 +29,31 @@
         private void InitializeComponent()
         {
             this.txtboxU_in = new System.Windows.Forms.TextBox();
-            this.txtboxU_out = new System.Windows.Forms.TextBox();
             this.txtboxp_price = new System.Windows.Forms.TextBox();
             this.cbopid_pname = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dgvmanage = new System.Windows.Forms.DataGridView();
+            this.btnsave = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Date_Added = new System.Windows.Forms.Label();
+            this.btnexit = new System.Windows.Forms.Button();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnsave = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.Date_Added = new System.Windows.Forms.Label();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btndelete = new System.Windows.Forms.Button();
+            this.cbomodule = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmanage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,18 +65,10 @@
             this.txtboxU_in.Size = new System.Drawing.Size(199, 21);
             this.txtboxU_in.TabIndex = 0;
             // 
-            // txtboxU_out
-            // 
-            this.txtboxU_out.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxU_out.Location = new System.Drawing.Point(174, 174);
-            this.txtboxU_out.Name = "txtboxU_out";
-            this.txtboxU_out.Size = new System.Drawing.Size(199, 21);
-            this.txtboxU_out.TabIndex = 1;
-            // 
             // txtboxp_price
             // 
             this.txtboxp_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxp_price.Location = new System.Drawing.Point(174, 218);
+            this.txtboxp_price.Location = new System.Drawing.Point(174, 175);
             this.txtboxp_price.Name = "txtboxp_price";
             this.txtboxp_price.Size = new System.Drawing.Size(199, 21);
             this.txtboxp_price.TabIndex = 2;
@@ -110,25 +106,13 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Unit_in_Stock";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 15);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Unit_out_Stock";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(30, 225);
+            this.label4.Location = new System.Drawing.Point(30, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 15);
             this.label4.TabIndex = 8;
@@ -140,7 +124,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(30, 271);
+            this.label5.Location = new System.Drawing.Point(30, 259);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 15);
             this.label5.TabIndex = 9;
@@ -150,13 +134,15 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(173, 265);
+            this.dateTimePicker1.Location = new System.Drawing.Point(174, 253);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(99, 21);
             this.dateTimePicker1.TabIndex = 10;
             // 
             // dgvmanage
             // 
+            this.dgvmanage.AllowUserToOrderColumns = true;
+            this.dgvmanage.BackgroundColor = System.Drawing.Color.White;
             this.dgvmanage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvmanage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -164,17 +150,80 @@
             this.Column4,
             this.Column5,
             this.Column2,
-            this.Column6,
-            this.Column7});
-            this.dgvmanage.Location = new System.Drawing.Point(469, 79);
+            this.Column6});
+            this.dgvmanage.Location = new System.Drawing.Point(565, 76);
             this.dgvmanage.Name = "dgvmanage";
-            this.dgvmanage.Size = new System.Drawing.Size(740, 301);
+            this.dgvmanage.Size = new System.Drawing.Size(547, 446);
             this.dgvmanage.TabIndex = 11;
+            this.dgvmanage.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmanage_CellContentClick);
+            this.dgvmanage.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmanage_CellContentClick);
+            // 
+            // btnsave
+            // 
+            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.Location = new System.Drawing.Point(174, 340);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(77, 23);
+            this.btnsave.TabIndex = 12;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(296, 340);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(77, 23);
+            this.btnUpdate.TabIndex = 13;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(677, 49);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(113, 21);
+            this.dateTimePicker2.TabIndex = 18;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // Date_Added
+            // 
+            this.Date_Added.AutoSize = true;
+            this.Date_Added.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date_Added.Location = new System.Drawing.Point(575, 54);
+            this.Date_Added.Name = "Date_Added";
+            this.Date_Added.Size = new System.Drawing.Size(85, 15);
+            this.Date_Added.TabIndex = 19;
+            this.Date_Added.Text = "Date_Added";
+            // 
+            // btnexit
+            // 
+            this.btnexit.Location = new System.Drawing.Point(1107, 22);
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(75, 23);
+            this.btnexit.TabIndex = 20;
+            this.btnexit.Text = "E&xit";
+            this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker3.Location = new System.Drawing.Point(846, 49);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(112, 21);
+            this.dateTimePicker3.TabIndex = 21;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "PID";
             this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
             // 
             // Column3
             // 
@@ -201,50 +250,60 @@
             this.Column6.HeaderText = "Prod_Added_Date";
             this.Column6.Name = "Column6";
             // 
-            // btnsave
+            // btndelete
             // 
-            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(173, 357);
-            this.btnsave.Name = "btnsave";
-            this.btnsave.Size = new System.Drawing.Size(77, 23);
-            this.btnsave.TabIndex = 12;
-            this.btnsave.Text = "Save";
-            this.btnsave.UseVisualStyleBackColor = true;
-            this.btnsave.Click += new System.EventHandler(this.btnsave_Click);
+            this.btndelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndelete.Location = new System.Drawing.Point(174, 391);
+            this.btndelete.Name = "btndelete";
+            this.btndelete.Size = new System.Drawing.Size(75, 23);
+            this.btndelete.TabIndex = 22;
+            this.btndelete.Text = "Delete";
+            this.btndelete.UseVisualStyleBackColor = true;
+            this.btndelete.Click += new System.EventHandler(this.btndelete_Click);
             // 
-            // btnUpdate
+            // cbomodule
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(310, 357);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(77, 23);
-            this.btnUpdate.TabIndex = 13;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.cbomodule.FormattingEnabled = true;
+            this.cbomodule.Items.AddRange(new object[] {
+            "IN",
+            "OUT"});
+            this.cbomodule.Location = new System.Drawing.Point(174, 214);
+            this.cbomodule.Name = "cbomodule";
+            this.cbomodule.Size = new System.Drawing.Size(99, 21);
+            this.cbomodule.TabIndex = 23;
             // 
-            // dateTimePicker2
+            // label3
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(666, 48);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker2.TabIndex = 18;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(30, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 15);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Module_stock";
             // 
-            // Date_Added
+            // button1
             // 
-            this.Date_Added.AutoSize = true;
-            this.Date_Added.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Date_Added.Location = new System.Drawing.Point(575, 54);
-            this.Date_Added.Name = "Date_Added";
-            this.Date_Added.Size = new System.Drawing.Size(85, 15);
-            this.Date_Added.TabIndex = 19;
-            this.Date_Added.Text = "Date_Added";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(296, 391);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column7
+            // button2
             // 
-            this.Column7.HeaderText = "Total_Stock";
-            this.Column7.Name = "Column7";
+            this.button2.Location = new System.Drawing.Point(1061, 628);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Manage_inventory
             // 
@@ -253,6 +312,13 @@
             this.BackgroundImage = global::WindowsFormsApplication3.Properties.Resources.abstract_crimson_landscape_backgrounds_powerpoint;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1211, 682);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbomodule);
+            this.Controls.Add(this.btndelete);
+            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.btnexit);
             this.Controls.Add(this.Date_Added);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.btnUpdate);
@@ -261,12 +327,10 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbopid_pname);
             this.Controls.Add(this.txtboxp_price);
-            this.Controls.Add(this.txtboxU_out);
             this.Controls.Add(this.txtboxU_in);
             this.Name = "Manage_inventory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -281,26 +345,30 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtboxU_in;
-        private System.Windows.Forms.TextBox txtboxU_out;
         private System.Windows.Forms.TextBox txtboxp_price;
         private System.Windows.Forms.ComboBox cbopid_pname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dgvmanage;
         private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label Date_Added;
+        private System.Windows.Forms.Button btnexit;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label Date_Added;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button btndelete;
+        private System.Windows.Forms.ComboBox cbomodule;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

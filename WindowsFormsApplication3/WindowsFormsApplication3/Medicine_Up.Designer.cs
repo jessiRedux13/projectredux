@@ -108,19 +108,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Category";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // dgvCategory
             // 
+            this.dgvCategory.BackgroundColor = System.Drawing.Color.White;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvCategory.Location = new System.Drawing.Point(455, 77);
+            this.dgvCategory.Location = new System.Drawing.Point(657, 72);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.Size = new System.Drawing.Size(412, 476);
             this.dgvCategory.TabIndex = 14;
+            this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             this.dgvCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellDoubleClick);
             // 
             // Column1
@@ -168,7 +171,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtCatDesc);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(25, 91);
+            this.panel1.Location = new System.Drawing.Point(146, 154);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 240);
             this.panel1.TabIndex = 8;

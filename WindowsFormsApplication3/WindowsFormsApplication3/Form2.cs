@@ -76,6 +76,13 @@ namespace WindowsFormsApplication3
             manage.Show();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            products cat = new products();
+            cat.categorymodule = "OtherStuff";
+            cat.Show();
+        }
+
        
        
 
